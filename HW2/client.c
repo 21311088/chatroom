@@ -56,6 +56,7 @@ name:			fgets(str,1000,stdin);//filename
 					write(sockfd,line,strlen(line));
 				}
 				sleep(3);
+				fclose(fd);
 				write(sockfd,"eof",strlen("eof"));
 				yes=0;
 			}
@@ -133,6 +134,7 @@ int main()
 							fprintf(fp,"%s",buff1);
 						}
 					}
+					fclose(fp);
 					memset(buff1,0,sizeof(2048));
 				}
 			}
